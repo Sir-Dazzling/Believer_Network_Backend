@@ -1,0 +1,22 @@
+type User{
+    id: ID!
+    fullName: String
+    username: String
+    email: String
+}
+
+type UserLoginInput{
+    usernameOrEmail: String
+    password: String
+}
+
+#Root
+type Query {
+#    getUser(usernameOrEmail: String, password: String!): User!
+    findAllUsers: [User]!
+}
+
+#Root
+type Mutation {
+    createUser(fullName: String!, email: String, username: String!): User!
+}
