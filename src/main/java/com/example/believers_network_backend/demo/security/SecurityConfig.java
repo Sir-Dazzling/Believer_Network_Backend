@@ -17,6 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 .antMatchers("/graphql").permitAll()
                 //authorize requests from graphql related apps that we will need
                 .antMatchers("/graphiql").permitAll()
+                .antMatchers("/schema.json").permitAll()
                 .antMatchers("/vendor/**").permitAll()
 
                 //any other requests should be authenticated

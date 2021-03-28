@@ -1,5 +1,6 @@
 package com.example.believers_network_backend.demo.error;
 
+import graphql.ErrorClassification;
 import graphql.ErrorType;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
@@ -19,7 +20,7 @@ public class UserAlreadyExistsException extends RuntimeException implements Grap
     }
 
     @Override
-    public ErrorType getErrorType() {
+    public ErrorClassification getErrorType() {
         return ErrorType.ValidationError;
     }
 }

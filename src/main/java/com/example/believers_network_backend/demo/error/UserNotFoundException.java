@@ -1,5 +1,6 @@
 package com.example.believers_network_backend.demo.error;
 
+import graphql.ErrorClassification;
 import graphql.ErrorType;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
@@ -33,7 +34,7 @@ public class UserNotFoundException extends RuntimeException implements GraphQLEr
     }
 
     @Override
-    public ErrorType getErrorType() {
+    public ErrorClassification getErrorType() {
         return ErrorType.ValidationError;
     }
 
