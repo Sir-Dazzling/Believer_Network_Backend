@@ -21,7 +21,7 @@ public class SecurityGraphQLAspect {
     /**
      * All graphQLResolver methods can be called only by authenticated user.
      *
-     * @Unsecured annotated methods are excluded
+     * @Unsecured annotated methods are excluded author- Otti Daniel
      */
 
     @Before("allGraphQLResolverMethods() && isDefinedInApplication() && !isMethodAnnotatedAsUnsecured()")

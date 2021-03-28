@@ -5,9 +5,11 @@ type User{
     email: String
 }
 
-type UserLoginInput{
-    usernameOrEmail: String
-    password: String
+input UserSignup {
+    fullname: String!
+    username: String!
+    email: String!
+    password: String!
 }
 
 #Root
@@ -18,5 +20,7 @@ type Query {
 
 #Root
 type Mutation {
-    createUser(fullName: String!, email: String, username: String!): User!
+#    login(data: UserLoginInput): User!
+#    registerUser(username: String!, email: String!, password: String!): User!
+    registerUser(data: UserSignup): User
 }
